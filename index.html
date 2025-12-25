@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custom Video Player</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="fullpage">
+
+  <!-- Navbar -->
+  <div class="navbar">
+      Custom Video Player
+
+      <!-- Search bar -->
+      <div class="search-bar">
+          <input type="text" id="search-input" placeholder="Search...">
+          <button id="search-btn">
+              <span class="material-symbols-outlined">search</span>
+          </button>
+      </div>
+  </div>
+
+  <!-- Video Container -->
+  <div class="video-container">
+      <video id="video-player">
+          <source src="cyclone.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+      </video>
+
+      <!-- Custom Controls -->
+      <div class="controls">
+          <div class="control-buttons">
+
+              <button id="skipminus-10">
+                  <span class="material-symbols-outlined">fast_rewind</span>
+              </button>
+
+              <button id="play">
+                  <span class="material-symbols-outlined">play_arrow</span>
+              </button>
+
+              <button id="skipplus-10">
+                  <span class="material-symbols-outlined">fast_forward</span>
+              </button>
+
+              <div class="video-timer">
+                  <span id="current-time">00:00</span>
+                  <span id="seperator">/</span>
+                  <span id="max-duration">00:00</span>
+              </div>
+
+              <div class="playback-line">
+                  <div class="progress-bar"></div>
+              </div>
+
+              <div class="right">
+                  <div class="volume-container">
+                      <div id="mute">
+                          <span class="material-symbols-outlined">volume_up</span>
+                      </div>
+                      <input type="range" id="volume" min="0" max="1" step="0.1" value="1">
+                  </div>
+                  <div class="full-screen">
+                      <span class="material-symbols-outlined">fullscreen</span>
+                  </div>
+              </div>
+
+          </div>
+      </div>
+  </div>
+
+  <!-- Suggestions Section -->
+  <div class="suggestions" id="suggestions">
+      <p>Video 1</p>
+      <p>Video 2</p>
+      <p>Cyclone Video</p>
+      <p>Nature Video</p>
+      <p>Learning JS</p>
+  </div>
+
+  <!-- Comments Section -->
+  <div class="comments">
+      <h3>Comments</h3>
+
+      <!-- Add comment form -->
+      <div class="comment-form">
+          <input type="text" id="comment-input" placeholder="Add a comment...">
+          <button id="comment-btn">Post</button>
+          <button id="clear-comments">Clear All</button>
+      </div>
+
+      <!-- Comment list -->
+      <div id="comment-list"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
